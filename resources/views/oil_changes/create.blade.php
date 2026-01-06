@@ -1,6 +1,6 @@
 <div>
     <div>
-        <form>
+        <form method="POST" action="{{ route('oil_changes.store') }}">
             @csrf
             <div>
                 <label for="current_odometer">Current Odometer:</label>
