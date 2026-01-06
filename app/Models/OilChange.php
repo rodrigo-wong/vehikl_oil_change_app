@@ -12,4 +12,8 @@ class OilChange extends Model
         'prev_odometer',
         'is_due',
     ];
+
+    protected $casts = [
+        'is_due' => 'boolean',
+    ];
 }
