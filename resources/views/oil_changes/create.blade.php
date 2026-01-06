@@ -4,7 +4,7 @@
             @csrf
             <div>
                 <label for="current_odometer">Current Odometer:</label>
-                <input type="number" id="current_odometer" name="current_odometer" value="{{ old('current_odometer') }}" required>
+                <input type="number" id="current_odometer" name="current_odometer" value="{{ old('current_odometer') }}" min="0" required>
                 @error('current_odometer')
                     <p style="color: red;">{{ $message }}</p>
                 @enderror
@@ -18,7 +18,7 @@
             </div>
             <div>
                 <label for="prev_odometer">Odometer at Previous Oil Change:</label>
-                <input type="number" id="prev_odometer" name="prev_odometer" value="{{ old('prev_odometer') }}" required>
+                <input type="number" id="prev_odometer" name="prev_odometer" value="{{ old('prev_odometer') }}" min="0" required>
                 @error('prev_odometer')
                     <p style="color: red;">{{ $message }}</p>
                 @enderror
