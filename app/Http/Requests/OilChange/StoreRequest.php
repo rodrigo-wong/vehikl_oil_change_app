@@ -27,4 +27,11 @@ class StoreRequest extends FormRequest
             'prev_odometer' => 'required|integer|min:0',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'current_odometer.gte' => 'The current odometer reading must be greater than or equal to the previous odometer reading.',
+        ];
+    }
 }
